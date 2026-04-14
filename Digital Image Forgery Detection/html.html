@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Forgery Detection Report</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        h1 { color: #2c3e50; }
+        table { border-collapse: collapse; width: 80%; }
+        th, td { border: 1px solid #aaa; padding: 8px; text-align: center; }
+        th { background-color: #34495e; color: white; }
+    </style>
+</head>
+
+<body>
+
+<h1>Image Forgery Detection System</h1>
+
+<h2>Method Overview</h2>
+<ul>
+    <li>Pixel-level analysis using Error Level Analysis (ELA)</li>
+    <li>Feature-level extraction using CNN and pretrained models</li>
+    <li>Dense layer ablation study</li>
+</ul>
+
+<h2>Models Evaluated</h2>
+<ul>
+    <li>CNN (D64, D64-128, D64-128-128)</li>
+    <li>VGG16</li>
+    <li>EfficientNet</li>
+</ul>
+
+<h2>Performance Comparison</h2>
+
+<table>
+<tr>
+    <th>Model</th>
+    <th>Accuracy (%)</th>
+    <th>Precision</th>
+    <th>Recall</th>
+    <th>F1</th>
+    <th>AUC</th>
+</tr>
+
+<tr><td>CNN_D64</td><td>90.31</td><td>0.8839</td><td>0.8851</td><td>0.8845</td><td>0.9472</td></tr>
+<tr><td>CNN_D64_128</td><td>91.80</td><td>0.8722</td><td>0.9425</td><td>0.9060</td><td>0.9593</td></tr>
+<tr><td>CNN_D64_128_128</td><td>91.11</td><td>0.8799</td><td>0.9124</td><td>0.8959</td><td>0.9534</td></tr>
+<tr><td>VGG16</td><td>88.88</td><td>0.8429</td><td>0.9029</td><td>0.8719</td><td>0.9464</td></tr>
+<tr><td>EfficientNet</td><td>58.08</td><td>0.0000</td><td>0.0000</td><td>0.0000</td><td>0.5000</td></tr>
+
+</table>
+
+<h2>Conclusion</h2>
+<p>
+CNN with dense configuration (64–128) achieved the best performance.
+Pixel-level ELA combined with feature-level CNN improves forgery detection accuracy.
+</p>
+
+</body>
+</html>

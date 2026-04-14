@@ -1,0 +1,11 @@
+{
+  "IMG_SIZE": 224,
+  "THRESHOLD": 0.5,
+  "MODELS": [
+    "CNN_D64",
+    "CNN_D64_128",
+    "CNN_D64_128_128",
+    "VGG16",
+    "EfficientNet"
+  ]
+}
